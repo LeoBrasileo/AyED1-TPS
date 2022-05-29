@@ -140,3 +140,14 @@ double velocidad(tuple<tiempo, gps> p1, tuple<tiempo, gps> p2){
     double res = dist / (tiempoOcurrido/3600);
     return res;
 }
+
+bool puntoEnRecorrido(gps g, recorrido r, distancia u) {
+    bool res = false;
+    for (int i = 0; i < r.size() && !res; i++){
+        double dist = distEnKM(g, r[i]);
+        if (dist < u){
+            res = true;
+        }
+    }
+    return res;
+}
