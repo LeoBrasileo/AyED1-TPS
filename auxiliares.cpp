@@ -135,5 +135,8 @@ viaje ordenarViaje(viaje v) {
 }
 
 double velocidad(tuple<tiempo, gps> p1, tuple<tiempo, gps> p2){
-    distEnKM(obtenerPosicion(p1), obtenerPosicion(p2)) / (obtenerTiempo(p2)/3600 - obtenerTiempo(p1)/3600);
+    double dist = distEnKM(obtenerPosicion(p1), obtenerPosicion(p2));
+    double tiempoOcurrido = obtenerTiempo(p2) - obtenerTiempo(p1);
+    double res = dist / (tiempoOcurrido/3600);
+    return res;
 }
