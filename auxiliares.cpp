@@ -141,13 +141,35 @@ double velocidad(tuple<tiempo, gps> p1, tuple<tiempo, gps> p2){
     return res;
 }
 
-bool puntoEnRecorrido(gps g, recorrido r, distancia u) {
+bool puntoCubierto(gps g, viaje v, distancia u) {
     bool res = false;
-    for (int i = 0; i < r.size() && !res; i++){
-        double dist = distEnKM(g, r[i]);
+    for (int i = 0; i < v.size(); i++){
+        gps pos = obtenerPosicion(v[i]);
+        double dist = distEnKM(pos, g);
         if (dist < u){
             res = true;
         }
     }
+    return res;
+}
+
+bool viajeEnFranja(viaje v, double t0, double tf){
+    bool franja = false;
+    bool min = false;
+    bool max = false;
+    for(int i = 0; i < v.size(); i++){
+        double ti = obtenerTiempo(v[i]);
+        if (t0 < ti && tf > ti){
+            franja = true;
+        }
+        if (ti < t0){
+            min = true;
+        }
+        if (ti > tf){
+            max = true;
+        }
+    }
+
+    bool res = (franja || (max && min));
     return res;
 }
