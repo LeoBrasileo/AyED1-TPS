@@ -11,8 +11,8 @@ using namespace std;
 tiempo tiempoTotal(viaje v) {
     tiempo t;
 
-    viaje vOrd = ordenarViaje(v);
-    t = obtenerTiempo(vOrd[vOrd.size()-1]) - obtenerTiempo(vOrd[0]);
+    v = ordenarViaje(v);
+    t = obtenerTiempo(v[v.size()-1]) - obtenerTiempo(v[0]);
 
     return t;
 }
@@ -20,7 +20,14 @@ tiempo tiempoTotal(viaje v) {
 /************++*********************** EJERCICIO distanciaTotal ************++*********************/
 distancia distanciaTotal(viaje v) {
     distancia d;
-    // codigo
+
+    v = ordenarViaje(v);
+    for (int i = 0; i < v.size() - 1; i++){
+        gps pos1 = obtenerPosicion(v[i]);
+        gps pos2 = obtenerPosicion(v[i+1]);
+        double distActual = distEnKM(pos1,pos2);
+        d = d + distActual;
+    }
 
     return d;
 }
@@ -28,7 +35,12 @@ distancia distanciaTotal(viaje v) {
 /*****************************+***** EJERCICIO excesoDeVelocidad **********************************/
 bool excesoDeVelocidad(viaje v) {
     bool resp = false;
-    // codigo
+
+    v = ordenarViaje(v);
+    for (int i = 0; i < v.size() - 1; i++){
+        double velocidadAct = velocidad(v[i], v[i+1]);
+        resp = (velocidadAct > 80);
+    }
 
     return resp;
 }
