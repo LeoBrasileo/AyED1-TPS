@@ -21,7 +21,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="velocidad estratosferica">
+    <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="punto recorrido in work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.h" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.h" afterDir="false" />
@@ -141,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653851998902</updated>
-      <workItem from="1653852001017" duration="8547000" />
+      <workItem from="1653852001017" duration="12256000" />
     </task>
     <task id="LOCAL-00001" summary="plantilla">
       <created>1653854097511</created>
@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653858661969</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="punto recorrido in work">
+      <created>1653863166302</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653863166302</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,25 +207,41 @@
     <MESSAGE value="tiempo total" />
     <MESSAGE value="velocidad extrema" />
     <MESSAGE value="velocidad estratosferica" />
-    <option name="LAST_COMMIT_MESSAGE" value="velocidad estratosferica" />
+    <MESSAGE value="punto recorrido in work" />
+    <option name="LAST_COMMIT_MESSAGE" value="punto recorrido in work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ejercicios.cpp</url>
-          <line>58</line>
-          <option name="timeStamp" value="25" />
+          <line>67</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ejercicios.cpp</url>
+          <line>68</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/auxiliares.cpp</url>
-          <line>147</line>
-          <option name="timeStamp" value="26" />
+          <line>155</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/auxiliares.cpp</url>
-          <line>148</line>
-          <option name="timeStamp" value="27" />
+          <line>164</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/auxiliares.cpp</url>
+          <line>159</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/auxiliares.cpp</url>
+          <line>178</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
