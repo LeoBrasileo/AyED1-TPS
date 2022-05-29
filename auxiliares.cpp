@@ -118,3 +118,18 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
 
 }
 
+viaje ordenarViaje(viaje v) {
+    int n = v.size();
+    tuple<int,gps> temp;
+
+    int i, j;
+    for (i = 0; i < n - 1; i++){
+        for (j = 0; j < n - i - 1; j++){
+            if (obtenerTiempo(v[j]) > obtenerTiempo(v[j+1])){
+                swap(v[j], v[j + 1]);
+            }
+        }
+    }
+
+    return v;
+}

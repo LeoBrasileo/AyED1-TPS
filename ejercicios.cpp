@@ -11,9 +11,8 @@ using namespace std;
 tiempo tiempoTotal(viaje v) {
     tiempo t;
 
-    for (int i = 0; i < v.size(); i++){
-        t = t + get<0>(v[i]);
-    }
+    viaje vOrd = ordenarViaje(v);
+    t = obtenerTiempo(vOrd[vOrd.size()-1]) - obtenerTiempo(vOrd[0]);
 
     return t;
 }

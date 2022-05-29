@@ -12,6 +12,7 @@ double distEnKM(gps posicion1, gps posicion2);
 gps desviarPunto(gps p, double desvioMtsLatitud, double desvioMtsLongitud);
 gps puntoGps(double latitud, double longitud);
 tuple<tiempo, gps> medicion(tiempo t, gps g);
+viaje ordenarViaje(viaje v);
 
 void guardarGrillaEnArchivo(grilla g, string nombreArchivo);
 void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchivo);
