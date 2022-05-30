@@ -24,8 +24,12 @@
     <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="flota flota">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcno" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/ejercicios.gcno" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/main.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/main.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.gcda" afterDir="false" />
@@ -34,8 +38,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/flotaTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/flotaTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcno" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejercicios.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicios.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,26 +64,28 @@
     <option name="minorVersion" value="1.1" />
   </component>
   <component name="ProjectId" id="29qsYTPgC4WNDXMu2UC0zECjFsE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Google Test.tpi">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -126,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653851998902</updated>
-      <workItem from="1653852001017" duration="13859000" />
+      <workItem from="1653852001017" duration="21165000" />
     </task>
     <task id="LOCAL-00001" summary="plantilla">
       <created>1653854097511</created>
@@ -177,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653866771894</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="flota flota">
+      <created>1653868490437</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653868490437</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,10 +223,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ejercicios.cpp</url>
-          <line>54</line>
-          <option name="timeStamp" value="46" />
+          <line>91</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeGoogleTestRunConfigurationType">
+        <watch expression="v[4]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

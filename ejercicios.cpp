@@ -76,7 +76,18 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
 /************************************** EJERCICIO construirGrilla *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
     grilla resp = {};
-    // codigo
+    double longCelda = abs((obtenerLongitud(esq1) - obtenerLongitud(esq2))/n);
+    double latCelda = abs((obtenerLatitud(esq2) - obtenerLatitud(esq1))/m);
+
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < m; j++){
+            gps nuevaEsq1 = esq1;
+            gps nuevaEsq2 = esq2;
+            nombre nuevoNombre = {i+1,j+1};
+            celda c = {nuevaEsq1, nuevaEsq2, nuevoNombre};
+            resp.push_back(c);
+        }
+    }
 
     return resp;
 }
