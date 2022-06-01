@@ -21,9 +21,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="flota flota">
+    <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="avances">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxiliares.h" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda" afterDir="false" />
@@ -38,7 +39,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/flotaTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/flotaTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcda" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.gcno" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.gcda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ejercicios.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ejercicios.cpp" afterDir="false" />
@@ -79,23 +79,25 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/leobr/Downloads/C_C___Coverage-2022.1.0-Eap.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Google Test.tpi">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="tpi" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="tpi" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tpi" RUN_TARGET_NAME="tpi" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tpi" TARGET_NAME="gmock" CONFIG_NAME="Debug">
@@ -134,7 +136,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653851998902</updated>
-      <workItem from="1653852001017" duration="21165000" />
+      <workItem from="1653852001017" duration="22187000" />
+      <workItem from="1653943049954" duration="2654000" />
     </task>
     <task id="LOCAL-00001" summary="plantilla">
       <created>1653854097511</created>
@@ -192,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653868490437</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="avances">
+      <created>1653942165672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653942165672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,14 +226,15 @@
     <MESSAGE value="velocidad estratosferica" />
     <MESSAGE value="punto recorrido in work" />
     <MESSAGE value="flota flota" />
-    <option name="LAST_COMMIT_MESSAGE" value="flota flota" />
+    <MESSAGE value="avances" />
+    <option name="LAST_COMMIT_MESSAGE" value="avances" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ejercicios.cpp</url>
-          <line>91</line>
+          <line>93</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>

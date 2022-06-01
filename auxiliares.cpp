@@ -118,7 +118,7 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
 
 }
 
-viaje ordenarViaje(viaje v) {
+void ordenarViaje(viaje &v) {
     int n = v.size();
     tuple<int,gps> temp;
 
@@ -130,8 +130,6 @@ viaje ordenarViaje(viaje v) {
             }
         }
     }
-
-    return v;
 }
 
 double velocidad(tuple<tiempo, gps> p1, tuple<tiempo, gps> p2){

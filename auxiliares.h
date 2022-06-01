@@ -12,7 +12,7 @@ double distEnKM(gps posicion1, gps posicion2);
 gps desviarPunto(gps p, double desvioMtsLatitud, double desvioMtsLongitud);
 gps puntoGps(double latitud, double longitud);
 tuple<tiempo, gps> medicion(tiempo t, gps g);
-viaje ordenarViaje(viaje v);
+void ordenarViaje(viaje &v);
 double velocidad(tuple<tiempo, gps>, tuple<tiempo, gps>);
 bool puntoCubierto(gps g, viaje v, distancia u);
 bool viajeEnFranja(viaje v, double t0, double tf);
