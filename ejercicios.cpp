@@ -10,9 +10,16 @@ using namespace std;
 /******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
 tiempo tiempoTotal(viaje v) {
     tiempo t;
+    tiempo maxTiempo = 0;
+    tiempo minTiempo = obtenerTiempo(v[0]);
 
-    ordenarViaje(v);
-    t = obtenerTiempo(v[v.size()-1]) - obtenerTiempo(v[0]);
+    for (int i = 0; i < v.size(); i++){
+        tiempo actual = obtenerTiempo(v[i]);
+        maxTiempo = actual > maxTiempo ? actual : maxTiempo;
+        minTiempo = actual < minTiempo ? actual : minTiempo;
+    }
+
+    t = maxTiempo - minTiempo;
 
     return t;
 }

@@ -21,10 +21,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="avances">
+    <list default="true" id="e89603d0-7ae5-46de-a510-dfb12451f9f8" name="Changes" comment="ordenar por referencia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auxiliares.h" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliares.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tpi.dir/auxiliares.gcda" afterDir="false" />
@@ -137,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653851998902</updated>
       <workItem from="1653852001017" duration="22187000" />
-      <workItem from="1653943049954" duration="2654000" />
+      <workItem from="1653943049954" duration="5437000" />
     </task>
     <task id="LOCAL-00001" summary="plantilla">
       <created>1653854097511</created>
@@ -202,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653942165672</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ordenar por referencia">
+      <created>1654099782946</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654099782946</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,14 +233,15 @@
     <MESSAGE value="punto recorrido in work" />
     <MESSAGE value="flota flota" />
     <MESSAGE value="avances" />
-    <option name="LAST_COMMIT_MESSAGE" value="avances" />
+    <MESSAGE value="ordenar por referencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="ordenar por referencia" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ejercicios.cpp</url>
-          <line>93</line>
+          <line>100</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
