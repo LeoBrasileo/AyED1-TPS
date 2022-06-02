@@ -131,22 +131,20 @@ void ordenarViaje(viaje &v) {
     }
 }
 
+bool puntoCubierto(gps p, viaje v, distancia u) {
+    bool res = false;
+    for (int i = 0; i < v.size() && !res; i++){
+        gps puntoDelViaje = obtenerPosicion(v[i]);
+        double dist = distEnKM(puntoDelViaje, p);
+        res = dist < u;
+    }
+    return res;
+}
+
 double velocidad(tuple<tiempo, gps> p1, tuple<tiempo, gps> p2){
     double dist = distEnKM(obtenerPosicion(p1), obtenerPosicion(p2));
     double tiempoOcurrido = obtenerTiempo(p2) - obtenerTiempo(p1);
     double res = dist / (tiempoOcurrido/3600);
-    return res;
-}
-
-bool puntoCubierto(gps g, viaje v, distancia u) {
-    bool res = true;
-    for (int i = 0; i < v.size() && res; i++){
-        gps pos = obtenerPosicion(v[i]);
-        double dist = distEnKM(pos, g);
-        if (dist >= u){
-            res = false;
-        }
-    }
     return res;
 }
 

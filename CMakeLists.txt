@@ -19,6 +19,10 @@ add_executable(tpi ${SOURCE_FILES}
         ${DIR_TESTS_GRP}
         )
 
+add_compile_options(-fprofile-instr-generate -fcoverage-mapping)
+add_link_options(-fprofile-instr-generate)
+add_compile_options(--coverage)
+
 set(CMAKE_CXX_FLAGS "-g --coverage")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 

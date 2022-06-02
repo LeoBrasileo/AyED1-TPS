@@ -14,7 +14,7 @@ gps puntoGps(double latitud, double longitud);
 tuple<tiempo, gps> medicion(tiempo t, gps g);
 void ordenarViaje(viaje &v);
 double velocidad(tuple<tiempo, gps>, tuple<tiempo, gps>);
-bool puntoCubierto(gps g, viaje v, distancia u);
+bool puntoCubierto(gps p, viaje v, distancia u);
 bool viajeEnFranja(viaje v, double t0, double tf);
 
 void guardarGrillaEnArchivo(grilla g, string nombreArchivo);

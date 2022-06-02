@@ -83,21 +83,19 @@ int flota(vector<viaje> f, tiempo t0, tiempo tf) {
 /************************************** EJERCICIO construirGrilla *******************************/
 grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
     grilla resp = {};
-    double longCelda = abs((obtenerLongitud(esq1) - obtenerLongitud(esq2))/n);
-    double latCelda = abs((obtenerLatitud(esq2) - obtenerLatitud(esq1))/m);
+    double anchoCelda = abs((obtenerLongitud(esq2) - obtenerLongitud(esq1))/m);
+    double altoCelda = abs((obtenerLatitud(esq1) - obtenerLatitud(esq2))/n);
 
     for (int i = 0; i < n; i++){
         for (int j = 0; j < m; j++){
-            gps nuevaEsq1 = {obtenerLatitud(esq1) + (i * latCelda), obtenerLongitud(esq1) + (j * longCelda)};
-            gps nuevaEsq2 = {obtenerLatitud(esq1) + latCelda, obtenerLongitud(esq1) + longCelda};
-            nuevaEsq2 = {obtenerLatitud(nuevaEsq2) + (i * latCelda), obtenerLongitud(nuevaEsq2) + (j * longCelda)};
+            gps nuevaEsq1 = {obtenerLatitud(esq1) - (i * altoCelda), obtenerLongitud(esq1) + j * anchoCelda};
+            gps nuevaEsq2 = {(obtenerLatitud(esq1) - altoCelda) - i * altoCelda, (obtenerLongitud(esq1) + anchoCelda) + j * anchoCelda};
             nombre nuevoNombre = {i+1,j+1};
             celda c = {nuevaEsq1, nuevaEsq2, nuevoNombre};
             resp.push_back(c);
         }
     }
 
-    guardarGrillaEnArchivo(resp, "prueba.csv");
     return resp;
 }
 
