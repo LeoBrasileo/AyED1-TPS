@@ -168,3 +168,26 @@ bool viajeEnFranja(viaje v, double t0, double tf){
     bool res = (franja || (max && min));
     return res;
 }
+
+vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g){
+    vector<nombre> ptsViajeGrilla;
+    for(int i = 0; i < v.size(); i++){
+        bool enRangoDeLong = false;
+        bool enRangoDeLat = false;
+        double longPunto = obtenerLongitud(obtenerPosicion(v[i]));
+        double latPunto = obtenerLatitud(obtenerPosicion(v[i]));
+        for(int j = 0; j < g.size() && !(enRangoDeLong && enRangoDeLat); j++){
+            enRangoDeLong = abs(obtenerLongitud(get<0>(g[j]))) <= longPunto && abs(obtenerLongitud(get<1>(g[j]))) > longPunto;
+            enRangoDeLat = abs(obtenerLatitud((get<0>(g[j])))) <= latPunto && abs(obtenerLatitud(get<1>(g[j]))) > latPunto;
+            if(enRangoDeLat && enRangoDeLong){
+                ptsViajeGrilla.push_back(get<2>(g[j]));
+            }
+        }
+    }
+    return ptsViajeGrilla;
+}
+
+double distanciaEntreViajes(nombre n1, nombre n2){
+    double res = sqrt((get<0>(n1) + get<0>(n2))^2+(get<1>(n1) + get<1>(n2))^2);
+    return res;
+}

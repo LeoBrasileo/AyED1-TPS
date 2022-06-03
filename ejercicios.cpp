@@ -101,9 +101,16 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
 
 /************************************* EJERCICIO cantidadDeSaltos ******************************/
 int cantidadDeSaltos(grilla g, viaje v) {
-    int resp;
-    // codigo
-
+    int resp = 0;
+    ordenarViaje(v);
+    vector<nombre> nombresViaje = puntosDeViajeEnGrilla(v,g);
+    for( int i = 0; i < nombresViaje.size() - 1; i++){
+        nombre n1 = nombresViaje[i];
+        nombre n2 = nombresViaje[i+1];
+        if(distanciaEntreViajes(n1, n2) > 1){
+            resp++;
+        }
+    }
     return resp;
 }
 
