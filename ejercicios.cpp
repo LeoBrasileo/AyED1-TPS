@@ -103,6 +103,7 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
 int cantidadDeSaltos(grilla g, viaje v) {
     int resp = 0;
     ordenarViaje(v);
+
     vector<nombre> nombresViaje = puntosDeViajeEnGrilla(v,g);
     for( int i = 0; i < nombresViaje.size() - 1; i++){
         nombre n1 = nombresViaje[i];
@@ -117,7 +118,17 @@ int cantidadDeSaltos(grilla g, viaje v) {
 
 /************************************* EJERCICIO corregirViaje ******************************/
 void corregirViaje(viaje& v, vector<tiempo> errores){
-    // codig
+    ordenarViaje(v);
+
+    for (int i = 0; i < v.size(); i++){
+        tiempo puntoT = obtenerTiempo(v[i]);
+        for (int j = 0; j < errores.size(); j++){
+            if (puntoT == errores[j]){
+                //en el punto i del viaje hay un error
+
+            }
+        }
+    }
 
     return;
 }

@@ -121,9 +121,8 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
 void ordenarViaje(viaje &v) {
     int n = v.size();
 
-    int i, j;
-    for (i = 0; i < n - 1; i++){
-        for (j = 0; j < n - i - 1; j++){
+    for (int i = 0; i < n - 1; i++){
+        for (int j = 0; j < n - i - 1; j++){
             if (obtenerTiempo(v[j]) > obtenerTiempo(v[j+1])){
                 swap(v[j], v[j + 1]);
             }
@@ -174,11 +173,15 @@ vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g){
     for(int i = 0; i < v.size(); i++){
         bool enRangoDeLong = false;
         bool enRangoDeLat = false;
-        double longPunto = obtenerLongitud(obtenerPosicion(v[i]));
         double latPunto = obtenerLatitud(obtenerPosicion(v[i]));
+        double longPunto = obtenerLongitud(obtenerPosicion(v[i]));
         for(int j = 0; j < g.size() && !(enRangoDeLong && enRangoDeLat); j++){
-            enRangoDeLong = abs(obtenerLongitud(get<0>(g[j]))) <= longPunto && abs(obtenerLongitud(get<1>(g[j]))) > longPunto;
-            enRangoDeLat = abs(obtenerLatitud((get<0>(g[j])))) <= latPunto && abs(obtenerLatitud(get<1>(g[j]))) > latPunto;
+            double latCelda0 = obtenerLatitud(get<0>(g[j]));
+            double latCelda1 = obtenerLatitud(get<1>(g[j]));
+            double lonCelda0 = obtenerLongitud(get<0>(g[j]));
+            double lonCelda1 = obtenerLongitud(get<1>(g[j]));
+            enRangoDeLat = (latPunto <= latCelda0 && latPunto > latCelda1);
+            enRangoDeLong = (longPunto >= lonCelda0 && longPunto < lonCelda1);
             if(enRangoDeLat && enRangoDeLong){
                 ptsViajeGrilla.push_back(get<2>(g[j]));
             }
