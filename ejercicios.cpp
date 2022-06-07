@@ -122,11 +122,10 @@ void corregirViaje(viaje& v, vector<tiempo> errores){
 
     for (int i = 0; i < v.size(); i++){
         tiempo puntoT = obtenerTiempo(v[i]);
-        for (int j = 0; j < errores.size(); j++){
-            if (puntoT == errores[j]){
-                //en el punto i del viaje hay un error
-
-            }
+        if (puntoEnErrores(puntoT, errores)){
+            //en el punto i hay un error
+            vector<int> puntosCercanosValidos = obtenerPuntosCercanosValidos(v, i, errores);
+            ordenarInts(puntosCercanosValidos); //ordenar indices
         }
     }
 

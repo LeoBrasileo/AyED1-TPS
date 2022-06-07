@@ -118,6 +118,20 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
 
 }
 
+void ordenarInts (vector<int> &t){
+    int temp;
+    int j;
+    for(int i = 1; i < t.size(); i++) {
+        temp = t[i];
+        j = i;
+        while(j > 0 && t[j-1]>temp) {
+            t[j] = t[j-1];
+            j--;
+        }
+        t[j] = temp;
+    }
+}
+
 void ordenarViaje(viaje &v) {
     int n = v.size();
 
@@ -192,5 +206,43 @@ vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g){
 
 double distanciaEntreViajes(nombre n1, nombre n2){
     double res = sqrt((get<0>(n1) + get<0>(n2))^2+(get<1>(n1) + get<1>(n2))^2);
+    return res;
+}
+
+bool puntoEnErrores (tiempo t, vector<tiempo> errores){
+    int i = 0;
+    int j = errores.size() -1;
+
+    while (j > i+1){
+        int k = (i + j) / 2;
+        if (errores[k] > t){
+            j = k;
+        } else{
+            i = k;
+        }
+    }
+
+    return errores[i] == t;
+}
+
+//esto siempre va a devolver los 2 indices de los puntos correctos mas cercanos
+vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> errores) {
+    vector<int> res = {};
+    int i = inicial - 1, j = inicial + 1;
+    while ((i >= 0 || j < v.size()) && (res.size() < 2))  {
+        bool limitei = i < 0;
+        bool limitej = j >= v.size();
+        tiempo ti = obtenerTiempo(v[i]);
+        tiempo tj = obtenerTiempo(v[j]);
+        if (!puntoEnErrores(ti, errores) && !limitei) {
+            res.push_back(i);
+        }
+        i--;
+        if (!puntoEnErrores(tj, errores) && !limitej) {
+            res.push_back(j);
+        }
+        j++;
+    }
+
     return res;
 }
