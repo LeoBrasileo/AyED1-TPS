@@ -44,7 +44,7 @@ bool excesoDeVelocidad(viaje v) {
     bool resp = false;
 
     ordenarViaje(v);
-    for (int i = 0; i < v.size() - 1; i++){
+    for (int i = 0; i < v.size() - 1 && !resp; i++){
         double velocidadAct = velocidad(v[i], v[i+1]);
         resp = (velocidadAct > 80);
     }
@@ -124,13 +124,13 @@ void corregirViaje(viaje& v, vector<tiempo> errores){
     for (int i = 0; i < vOrd.size(); i++){
         tiempo puntoT = obtenerTiempo(vOrd[i]);
         if (puntoEnErrores(puntoT, errores)){
-            //indice del error en viaje NO ordenado
+            //k: indice del error en viaje NO ordenado
             int k = 0;
-            while (k < v.size() && obtenerTiempo(v[k]) != puntoT){
+            while (k < v.size() && obtenerTiempo(v[k]) != puntoT){ //busqueda lineal
                 k++;
             }
 
-            //en el punto i hay un error
+            //en el punto i de viaje ordenado hay un error
             vector<int> puntosCercanosValidos = obtenerPuntosCercanosValidos(vOrd, i, errores);
             ordenarInts(puntosCercanosValidos); //ordenar indice
             int n = puntosCercanosValidos[0], m = puntosCercanosValidos[1];
