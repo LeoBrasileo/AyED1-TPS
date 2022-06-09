@@ -22,3 +22,11 @@ TEST(excesoDeVelocidadTEST, superaLaVelocidad){
 
     EXPECT_TRUE(excesoDeVelocidad(v));
 }
+
+TEST(excesoDeVelocidadTEST, igualAlLimite){
+    viaje v ={medicion(0.0, P),
+              medicion(unaHora, desviarPunto(P,79999, 0)),
+              medicion(unaHora*2, P)};
+//el desvío son 7999 ya que si fuesen 80000 estariamos despreciando la curvatura de la tierra
+    EXPECT_FALSE(excesoDeVelocidad(v));
+}

@@ -26,7 +26,7 @@ tiempo tiempoTotal(viaje v) {
 
 /************++*********************** EJERCICIO distanciaTotal ************++*********************/
 distancia distanciaTotal(viaje v) {
-    distancia d;
+    distancia d = 0;
 
     ordenarViaje(v);
     for (int i = 0; i < v.size() - 1; i++){

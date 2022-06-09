@@ -21,3 +21,8 @@ TEST(tiempoTotalTEST, viajeLargo){
     EXPECT_DOUBLE_EQ(tiempoTotal(v),6.1);
 }
 
+TEST(tiempoTotalTEST, viajeCorto){
+    viaje v = {medicion(3,P),
+               medicion(4,P)};
+    EXPECT_DOUBLE_EQ(tiempoTotal(v), 1);
+}

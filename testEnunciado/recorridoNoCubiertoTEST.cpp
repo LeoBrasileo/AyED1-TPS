@@ -75,3 +75,19 @@ TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
     ASSERT_ELEMENTS(res, {R[3], R[0], R[2]});
 
 }
+
+TEST (recorridoNoCubiertoTEST, todosAfuera){
+    gps p = puntoGps(33,49);
+    recorrido r = {p,
+                   desviarPunto(p,0,50),
+                   desviarPunto(p,0, 100),
+                   desviarPunto(p,150, 0),
+                   desviarPunto(p, 181, 75)
+                   };
+    viaje v = {medicion(3, desviarPunto(p,-250,50)),
+               medicion(4.7, desviarPunto(p, -250, 100)),
+               medicion(6,desviarPunto(p,-250, -200)),
+               medicion(8.24,desviarPunto(p,-300, -180))
+    };
+    EXPECT_EQ(recorridoNoCubierto(v, r, 0.2), r);
+}
