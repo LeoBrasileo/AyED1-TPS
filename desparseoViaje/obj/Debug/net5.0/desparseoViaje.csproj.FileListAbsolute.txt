@@ -1,0 +1,16 @@
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.csproj.AssemblyReference.cache
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.AssemblyInfoInputs.cache
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.AssemblyInfo.cs
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.csproj.CoreCompileInputs.cache
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\desparseoViaje.exe
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\desparseoViaje.deps.json
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\desparseoViaje.runtimeconfig.json
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\desparseoViaje.runtimeconfig.dev.json
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\desparseoViaje.dll
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\ref\desparseoViaje.dll
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\bin\Debug\net5.0\desparseoViaje.pdb
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.dll
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\ref\desparseoViaje.dll
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.pdb
+C:\Users\leobr\OneDrive\Documents\dotnet\desparseoViaje\obj\Debug\net5.0\desparseoViaje.genruntimeconfig.cache
