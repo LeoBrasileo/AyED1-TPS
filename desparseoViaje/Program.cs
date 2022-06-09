@@ -19,7 +19,7 @@ namespace desparseoViaje
                     XmlNode lonNode = pointNode.SelectSingleNode("@lon");
                     XmlNode timeNode = pointNode.SelectSingleNode("time");
                     DateTime dt = dt = DateTime.ParseExact(timeNode.InnerText, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
-                    Console.WriteLine("medicion({0},puntoGps({1},{2})),", TimeFunctions.Date2Ms(dt), latNode.InnerText, lonNode.InnerText);
+                    Console.WriteLine("medicion({0},puntoGps({1},{2})),", Date2Seconds(dt), latNode.InnerText, lonNode.InnerText);
 
                 }
             }
@@ -27,18 +27,11 @@ namespace desparseoViaje
             {
                 Console.WriteLine(e.Message);
             }
-        }
-    }
 
-    class TimeFunctions
-    {
-        public static DateTime Ms2Date(long offset)
-        {
-            return new DateTime((offset) * TimeSpan.TicksPerMillisecond);
-        }
-        public static long Date2Ms(DateTime timestamp)
-        {
-            return timestamp.Ticks / TimeSpan.TicksPerMillisecond;
+            static long Date2Seconds(DateTime timestamp)
+            {
+                return (long)timestamp.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+            }
         }
     }
 }
