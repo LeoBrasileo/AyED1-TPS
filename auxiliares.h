@@ -21,6 +21,7 @@ double distanciaEntreViajes(nombre n1, nombre n2);
 vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g);
 bool puntoEnErrores (tiempo t, vector<tiempo> errores);
 vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> errores);
+bool sonGrillasIguales(grilla g0, grilla g1);
 
 void guardarGrillaEnArchivo(grilla g, string nombreArchivo);
 void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchivo);

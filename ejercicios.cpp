@@ -8,6 +8,7 @@
 using namespace std;
 
 /******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
+//tiempoTotal es O(n) porque tiene solo un ciclo y en el peor caso la ejecucion va hacer un polinomio lineal de operaciones elementales
 tiempo tiempoTotal(viaje v) {
     tiempo t;
     tiempo maxTiempo = 0;
@@ -25,6 +26,8 @@ tiempo tiempoTotal(viaje v) {
 }
 
 /************++*********************** EJERCICIO distanciaTotal ************++*********************/
+//distanciaTotal es O(n^2) porque tiene 2 ciclos anidados (uno adentro del otro) en ordenarViaje(v) y despues hace un ciclo mas
+//por lo que la complejitud en el peor caso seria O(n^2 + n) que es lo mismo que O(n^2)
 distancia distanciaTotal(viaje v) {
     distancia d = 0;
 
@@ -53,6 +56,8 @@ bool excesoDeVelocidad(viaje v) {
 }
 
 /************************************ EJERCICIO recorridoCubierto *******************************/
+//recorridoNoCubierto es O(n * m) porque el algoritmo hace una iteracion de r y por cada elemento de r una iteracion de v en puntoCubierto(p,v,u)
+//por lo que hay m * n iteraciones totales en el peor caso O(n * m)
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     vector<gps> resp;
 

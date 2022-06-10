@@ -250,3 +250,23 @@ void guardarViajeEnArchivo(viaje v, string nombreArchivo){
 
     guardarRecorridosEnArchivo({r}, nombreArchivo);
 }
+
+bool sonGrillasIguales(grilla g0, grilla g1){
+    bool res = true;
+    if (g0.size() == g1.size()){
+        tuple<gps, gps, nombre> temp;
+        for (int i = 0; i < g0.size() && res; i++){
+            temp = g0[i];
+
+            int k = 0;
+            while (k < g1.size() && g1[k] != temp){
+                k++;
+            }
+            res = k < g1.size();
+        }
+    } else{
+        res = false;
+    }
+
+    return res;
+}

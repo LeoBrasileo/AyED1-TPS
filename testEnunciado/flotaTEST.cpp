@@ -26,3 +26,7 @@ TEST(flotaTotalTEST, AlgunosAdentro){
     EXPECT_EQ(flota(f, 1.8,2.55),2);
 }
 
+TEST(flotaTotalTEST, todosDespues){
+    EXPECT_EQ(flota(f, 2.8,4.55),0);
+}
+
