@@ -24,5 +24,6 @@ vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> er
 
 void guardarGrillaEnArchivo(grilla g, string nombreArchivo);
 void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchivo);
+void guardarViajeEnArchivo(viaje v, string nombreArchivo);
 
 #endif //TRANSPORTEURBANO_AUXILIARES_H

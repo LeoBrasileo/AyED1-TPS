@@ -211,18 +211,11 @@ double distanciaEntreViajes(nombre n1, nombre n2){
 
 bool puntoEnErrores (tiempo t, vector<tiempo> errores){
     int i = 0;
-    int j = errores.size() -1;
-
-    while (j > i+1){
-        int k = (i + j) / 2;
-        if (errores[k] > t){
-            j = k;
-        } else{
-            i = k;
-        }
+    while (i < errores.size() && errores[i] != t){ //busqueda lineal
+        i++;
     }
 
-    return errores[i] == t;
+    return i < errores.size();
 }
 
 //esto siempre va a devolver los 2 indices de los puntos correctos mas cercanos
@@ -245,4 +238,15 @@ vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> er
     }
 
     return res;
+}
+
+void guardarViajeEnArchivo(viaje v, string nombreArchivo){
+    recorrido r = {};
+    ordenarViaje(v);
+    for(int i = 0; i < v.size(); i++){
+        gps punto = obtenerPosicion(v[i]);
+        r.push_back(punto);
+    }
+
+    guardarRecorridosEnArchivo({r}, nombreArchivo);
 }
