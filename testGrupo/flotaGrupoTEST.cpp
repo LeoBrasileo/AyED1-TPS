@@ -22,3 +22,10 @@ TEST(flotaTotalGrupoTEST, todosDespues){
     EXPECT_EQ(flota(s, 2.8,4.55),0);
 }
 
+TEST(flotaTotalGrupoTEST, primeroAdentroPorBordes){
+    EXPECT_EQ(flota(s, 0.1,0.5),1);
+}
+
+TEST(flotaTotalGrupoTEST, ultimoAdentroPorBordes){
+    EXPECT_EQ(flota(s, 2.7,2.9),1);
+}

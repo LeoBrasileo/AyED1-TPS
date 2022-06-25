@@ -15,10 +15,16 @@ TEST(excesoDeVelocidadGrupoTEST, superaLaVelocidad){
     EXPECT_TRUE(excesoDeVelocidad(v));
 }
 
-TEST(excesoDeVelocidadGrupoTEST, igualAlLimite){
+TEST(excesoDeVelocidadGrupoTEST, justo80Km){
     viaje v ={medicion(0.0, P),
-              medicion(unaHora, desviarPunto(P,79999, 0)),
+              medicion(unaHora, desviarPunto(P,80000, 0)),
               medicion(unaHora*2, P)};
-//el desvío son 7999 ya que si fuesen 80000 estariamos despreciando la curvatura de la tierra
+    EXPECT_FALSE(excesoDeVelocidad(v));
+}
+
+TEST(excesoDeVelocidadGrupoTEST, excesoEn79Km){
+    viaje v ={medicion(0.0, P),
+              medicion(unaHora, desviarPunto(P,79990, 0)),
+              medicion(unaHora*2, P)};
     EXPECT_FALSE(excesoDeVelocidad(v));
 }

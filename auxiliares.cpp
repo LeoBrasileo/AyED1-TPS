@@ -157,7 +157,7 @@ bool puntoCubierto(gps p, viaje v, distancia u) {
 double velocidad(tuple<tiempo, gps> p1, tuple<tiempo, gps> p2){
     double dist = distEnKM(obtenerPosicion(p1), obtenerPosicion(p2));
     double tiempoOcurrido = obtenerTiempo(p2) - obtenerTiempo(p1);
-    double res = dist / (tiempoOcurrido/3600);
+    float res = dist / (tiempoOcurrido/3600); //guardamos en float asi no tenemos errores con decimales no deseados
     return res;
 }
 
@@ -167,7 +167,7 @@ bool viajeEnFranja(viaje v, double t0, double tf){
     bool max = false;
     for(int i = 0; i < v.size(); i++){
         double ti = obtenerTiempo(v[i]);
-        if (t0 < ti && tf > ti){
+        if (t0 <= ti && tf >= ti){
             franja = true;
         }
         if (ti < t0){
