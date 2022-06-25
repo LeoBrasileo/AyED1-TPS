@@ -17,7 +17,7 @@ void ordenarViaje(viaje &v);
 double velocidad(tuple<tiempo, gps>, tuple<tiempo, gps>);
 bool puntoCubierto(gps p, viaje v, distancia u);
 bool viajeEnFranja(viaje v, double t0, double tf);
-double distanciaEntreViajes(nombre n1, nombre n2);
+int distanciaEntreViajes(nombre n1, nombre n2);
 vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g);
 bool puntoEnErrores (tiempo t, vector<tiempo> errores);
 vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> errores);

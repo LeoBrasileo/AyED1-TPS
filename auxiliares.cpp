@@ -204,8 +204,14 @@ vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g){
     return ptsViajeGrilla;
 }
 
-double distanciaEntreViajes(nombre n1, nombre n2){
-    double res = sqrt((get<0>(n1) + get<0>(n2))^2+(get<1>(n1) + get<1>(n2))^2);
+int distanciaEntreViajes(nombre n1, nombre n2){
+    int nombre1Lat = get<0>(n1);
+    int nombre1Lon = get<1>(n1);
+    int nombre2Lat = get<0>(n2);
+    int nombre2Lon = get<1>(n2);
+    int cuentaLat = pow((nombre1Lat - nombre2Lat),2);
+    int cuentaLon = pow((nombre1Lon - nombre2Lon),2);
+    int res = sqrt(cuentaLat + cuentaLon);
     return res;
 }
 

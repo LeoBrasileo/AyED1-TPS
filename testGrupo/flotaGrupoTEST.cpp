@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<viaje> f = {{
+vector<viaje> s = {{
                    medicion(1.5,puntoGps(2.5, 2.89996)),
                    medicion(1.7,puntoGps(2.5, 2.89997)),
                    medicion(1.9,puntoGps(2.5, 2.89998))},
@@ -18,11 +18,7 @@ vector<viaje> f = {{
                     medicion(0.7,puntoGps(2.5, 2.89998))},
                    };
 
-TEST(flotaTotalTEST, todosAntesDeFranja){
-    EXPECT_EQ(flota(f,3.0,5.0),0);
-}
-
-TEST(flotaTotalTEST, AlgunosAdentro){
-    EXPECT_EQ(flota(f, 1.8,2.55),2);
+TEST(flotaTotalGrupoTEST, todosDespues){
+    EXPECT_EQ(flota(s, 2.8,4.55),0);
 }
 

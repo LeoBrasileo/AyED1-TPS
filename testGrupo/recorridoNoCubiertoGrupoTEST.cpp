@@ -47,31 +47,18 @@ const recorrido RRulos = {P,
                      desviarPunto(P, 0, 0)
 };
 
-
-
-TEST(recorridoNoCubiertoTEST, viajePerfecto){
-    viaje v = {};
-    for(int i = 0; i < R.size(); i++){
-        v.push_back(medicion(i, R[i]));
-    }
-
-    EXPECT_EQ(recorridoNoCubierto(v, R, 10).size(), 0);
-}
-
-TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
-    viaje v = {};
-    vector<int> desvios(R.size(), 0);
-    desvios[0] = 390;
-    desvios[1] = 30;
-    desvios[2] = -190;
-    desvios[3] = -390;
-
-    for(int i = 0; i < R.size(); i++){
-        v.push_back(medicion(i, desviarPunto(R[i], 0, desvios[i])));
-    }
-
-    vector<gps> res = recorridoNoCubierto(v, R, 0.1);
-    EXPECT_EQ(res.size(), 3);
-    ASSERT_ELEMENTS(res, {R[3], R[0], R[2]});
-
+TEST (recorridoNoCubiertoGrupoTEST, todosAfuera){
+    gps p = puntoGps(33,49);
+    recorrido r = {p,
+                   desviarPunto(p,0,50),
+                   desviarPunto(p,0, 100),
+                   desviarPunto(p,150, 0),
+                   desviarPunto(p, 181, 75)
+                   };
+    viaje v = {medicion(3, desviarPunto(p,-250,50)),
+               medicion(4.7, desviarPunto(p, -250, 100)),
+               medicion(6,desviarPunto(p,-250, -200)),
+               medicion(8.24,desviarPunto(p,-300, -180))
+    };
+    EXPECT_EQ(recorridoNoCubierto(v, r, 0.2), r);
 }

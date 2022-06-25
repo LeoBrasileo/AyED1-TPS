@@ -110,7 +110,8 @@ int cantidadDeSaltos(grilla g, viaje v) {
     ordenarViaje(v);
 
     vector<nombre> nombresViaje = puntosDeViajeEnGrilla(v,g);
-    for (int i = 0; i < nombresViaje.size() - 1; i++){
+    int cantNombres = nombresViaje.size();
+    for (int i = 0; i < (cantNombres - 1); i++){
         nombre n1 = nombresViaje[i];
         nombre n2 = nombresViaje[i+1];
         if(distanciaEntreViajes(n1, n2) > 1){
