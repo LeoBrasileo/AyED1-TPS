@@ -148,8 +148,8 @@ void corregirViaje(viaje& v, vector<tiempo> errores){
             double velLon = rectaLon / tRecta;
 
             tiempo tdif = obtenerTiempo(vOrd[i]) - obtenerTiempo(vOrd[n]);
-            double longCorregido = obtenerLongitud(obtenerPosicion(vOrd[n])) + (velLon * tdif);
             double latCorregido = obtenerLatitud(obtenerPosicion(vOrd[n])) + (velLat * tdif);
+            double longCorregido = obtenerLongitud(obtenerPosicion(vOrd[n])) + (velLon * tdif);
             gps corregido = puntoGps(latCorregido, longCorregido);
 
             get<1>(v[k]) = corregido;

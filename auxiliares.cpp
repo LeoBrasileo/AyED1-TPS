@@ -170,10 +170,10 @@ bool viajeEnFranja(viaje v, double t0, double tf){
         if (t0 <= ti && tf >= ti){
             franja = true;
         }
-        if (ti < t0){
+        if (ti <= t0){
             min = true;
         }
-        if (ti > tf){
+        if (ti >= tf){
             max = true;
         }
     }
@@ -229,15 +229,14 @@ vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> er
     vector<int> res = {};
     int i = inicial - 1, j = inicial + 1;
     while ((i >= 0 || j < v.size()) && (res.size() < 2))  {
-        bool limitei = i < 0;
-        bool limitej = j >= v.size();
         tiempo ti = obtenerTiempo(v[i]);
         tiempo tj = obtenerTiempo(v[j]);
-        if (!puntoEnErrores(ti, errores) && !limitei) {
+
+        if (!puntoEnErrores(ti, errores) && i >= 0) {
             res.push_back(i);
         }
         i--;
-        if (!puntoEnErrores(tj, errores) && !limitej) {
+        if (!puntoEnErrores(tj, errores) && j < v.size()) {
             res.push_back(j);
         }
         j++;
