@@ -20,6 +20,7 @@ bool viajeEnFranja(viaje v, double t0, double tf);
 int distanciaEntreViajes(nombre n1, nombre n2);
 vector<nombre> puntosDeViajeEnGrilla(viaje v, grilla g);
 bool puntoEnErrores (tiempo t, vector<tiempo> errores);
+tiempo maxTiempo (viaje v);
 vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> errores);
 bool sonGrillasIguales(grilla g0, grilla g1);
 

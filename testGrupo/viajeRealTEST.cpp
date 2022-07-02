@@ -550,7 +550,7 @@ TEST(viajeRealTEST, ChacaritaACaballito){
                medicion(1654802294,puntoGps(-34.59747582,-58.45151126)),
                medicion(1654802298,puntoGps(-34.59776010,-58.45107745)),
                medicion(1654802300,puntoGps(-34.59786527,-58.45098359)),
-               medicion(1654802302,puntoGps(-34.59784247,-58.45081745)),
+               medicion(1654802302,puntoGps(-34.59797043,-58.45081745)),
                medicion(1654802307,puntoGps(-34.59796186,-58.45035846)),
                medicion(1654802310,puntoGps(-34.59798440,-58.45053396)),
                medicion(1654802312,puntoGps(-34.59807481,-58.45060666)),

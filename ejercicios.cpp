@@ -124,35 +124,25 @@ int cantidadDeSaltos(grilla g, viaje v) {
 
 /************************************* EJERCICIO corregirViaje ******************************/
 void corregirViaje(viaje& v, vector<tiempo> errores){
-    viaje vOrd = v;
-    ordenarViaje(vOrd);
-
-    for (int i = 0; i < vOrd.size(); i++){
-        tiempo puntoT = obtenerTiempo(vOrd[i]);
+    for (int i = 0; i < v.size(); i++){
+        tiempo puntoT = obtenerTiempo(v[i]);
         if (puntoEnErrores(puntoT, errores)){
-            //k: indice del error en viaje NO ordenado
-            int k = 0;
-            while (k < v.size() && obtenerTiempo(v[k]) != puntoT){ //busqueda lineal
-                k++;
-            }
-
-            //en el punto i de viaje ordenado hay un error
-            vector<int> puntosCercanosValidos = obtenerPuntosCercanosValidos(vOrd, i, errores);
-            ordenarInts(puntosCercanosValidos); //ordenar indice
+            //en el punto i de viaje hay un error
+            vector<int> puntosCercanosValidos = obtenerPuntosCercanosValidos(v, i, errores);
             int n = puntosCercanosValidos[0], m = puntosCercanosValidos[1];
 
-            tiempo tRecta = obtenerTiempo(vOrd[m]) - obtenerTiempo(vOrd[n]);
-            double rectaLat = obtenerLatitud(obtenerPosicion(vOrd[m])) - obtenerLatitud(obtenerPosicion(vOrd[n]));
-            double rectaLon = obtenerLongitud(obtenerPosicion(vOrd[m])) - obtenerLongitud(obtenerPosicion(vOrd[n]));
+            tiempo tRecta = obtenerTiempo(v[m]) - obtenerTiempo(v[n]);
+            double rectaLat = obtenerLatitud(obtenerPosicion(v[m])) - obtenerLatitud(obtenerPosicion(v[n]));
+            double rectaLon = obtenerLongitud(obtenerPosicion(v[m])) - obtenerLongitud(obtenerPosicion(v[n]));
             double velLat = rectaLat / tRecta; //velocidad de latitud por seg en los puntos validos
             double velLon = rectaLon / tRecta;
 
-            tiempo tdif = obtenerTiempo(vOrd[i]) - obtenerTiempo(vOrd[n]);
-            double latCorregido = obtenerLatitud(obtenerPosicion(vOrd[n])) + (velLat * tdif);
-            double longCorregido = obtenerLongitud(obtenerPosicion(vOrd[n])) + (velLon * tdif);
+            tiempo tdif = obtenerTiempo(v[i]) - obtenerTiempo(v[n]);
+            double latCorregido = obtenerLatitud(obtenerPosicion(v[n])) + (velLat * tdif);
+            double longCorregido = obtenerLongitud(obtenerPosicion(v[n])) + (velLon * tdif);
             gps corregido = puntoGps(latCorregido, longCorregido);
 
-            get<1>(v[k]) = corregido;
+            get<1>(v[i]) = corregido;
         }
     }
 

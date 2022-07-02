@@ -118,20 +118,6 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
 
 }
 
-void ordenarInts (vector<int> &t){
-    int temp;
-    int j;
-    for(int i = 1; i < t.size(); i++) {
-        temp = t[i];
-        j = i;
-        while(j > 0 && t[j-1]>temp) {
-            t[j] = t[j-1];
-            j--;
-        }
-        t[j] = temp;
-    }
-}
-
 void ordenarViaje(viaje &v) {
     int n = v.size();
 
@@ -223,25 +209,55 @@ bool puntoEnErrores (tiempo t, vector<tiempo> errores){
 
     return i < errores.size();
 }
+bool indiceEnCercanos (int indice, vector<int> s){
+    int i = 0;
+    while (i < s.size() && s[i] != indice){
+        i++;
+    }
+
+    return i < s.size();
+}
+
+tiempo maxTiempo (viaje v){
+    tiempo res = obtenerTiempo(v[0]);
+    for (int i = 1; i < v.size(); i++){
+        if ((obtenerTiempo(v[i]) > res)){
+            res = obtenerTiempo(v[i]);
+        }
+    }
+    return res;
+}
 
 //esto siempre va a devolver los 2 indices de los puntos correctos mas cercanos
 vector<int> obtenerPuntosCercanosValidos(viaje v, int inicial, vector<tiempo> errores) {
     vector<int> res = {};
-    int i = inicial - 1, j = inicial + 1;
-    while ((i >= 0 || j < v.size()) && (res.size() < 2))  {
-        tiempo ti = obtenerTiempo(v[i]);
-        tiempo tj = obtenerTiempo(v[j]);
-
-        if (!puntoEnErrores(ti, errores) && i >= 0) {
-            res.push_back(i);
+    tiempo ttemp;
+    int temp, j;
+    while (res.size() < 2){
+        int k = inicial;
+        tiempo tdif = maxTiempo(v);
+        tiempo tactual = obtenerTiempo(v[inicial]);
+        for (int i = 0; i < v.size(); i++){
+            tiempo ti = obtenerTiempo(v[i]);
+            double tdifAct = abs(tactual - ti);
+            if (tdifAct < tdif && !puntoEnErrores(ti, errores) && !indiceEnCercanos(i, res)){
+                tdif = tdifAct;
+                k = i;
+            }
         }
-        i--;
-        if (!puntoEnErrores(tj, errores) && j < v.size()) {
-            res.push_back(j);
-        }
-        j++;
+        res.push_back(k);
     }
-
+    //ordenar por tiempo (adelante los puntos que ocurrieron antes)
+    for(int i = 1; i < res.size(); i++) {
+        ttemp = obtenerTiempo(v[res[i]]);
+        temp = res[i];
+        j = i;
+        while(j > 0 && obtenerTiempo(v[res[j-1]]) > ttemp) {
+            res[j] = res[j-1];
+            j--;
+        }
+        res[j] = temp;
+    }
     return res;
 }
 
